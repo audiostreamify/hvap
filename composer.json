@@ -1,0 +1,23 @@
+{
+  "name": "audiostreamify/hvap",
+  "description": "HVAP (or Hyper Virtual Audio Processor) is a Open Source audio processing Software.",
+  "keywords": ["audiostreamify", "audio", "tags", "bpm"],
+  "version": "0.1",
+  "license": "MIT",
+  "type": "package",
+  "authors": [{
+    "name": "Donald Pakkies",
+    "email": "donaldpakkies@gmail.com"
+  }],
+  "require": {
+    "php": ">=7.3.0",
+    "james-heinrich/getid3": "^1.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "Audiostreamify\\Hvap\\": "src/"
+    },
+    "files": ["src/helpers.php"]
+  },
+  "minimum-stability": "stable"
+}
