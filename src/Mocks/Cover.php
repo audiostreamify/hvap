@@ -19,7 +19,7 @@ trait Cover
     $getID3 = ($this->id3 ?? $this->id3 = new getID3);
 
     /**
-     * Analyze the file and get the file formaat from the info variable.
+     * Analyze the file and get the file format from the info variable.
      * Then return the image as a base64 encoded string
      */
     $info  = $getID3->analyze($this->file);
