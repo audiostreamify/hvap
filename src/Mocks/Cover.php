@@ -25,6 +25,6 @@ trait Cover
     $info  = $getID3->analyze($this->file);
     $image = $getID3->GetFileFormat($info['comments']['picture'][0]['data']);
 
-    return 'data:' . $image['mime_type'] . ';base64,' . base64_encode($info['comments']['picture'][0]['data']) . '"';
+    return 'data:' . $image['mime_type'] . ';base64,' . base64_encode($info['comments']['picture'][0]['data']);
   }
 }
