@@ -55,9 +55,9 @@ class Audio
    * Set source file
    *
    * @param  string $file File path
-   * @return bool
+   * @return Audio $this
    */
-  public function source(string $file) : bool
+  public function source(string $file) : Audio
   {
     /**
      * If the audio file does not exist, throw a FileNotFound exception
@@ -66,21 +66,21 @@ class Audio
      */
     if (!file_exists($file)) throw new FileNotFound($file);
 
-    // Assign values.
+    // Assign value and return object.
     $this->file = $file;
-
-    return true;
+    return $this;
   }
 
   /**
    * Set supported extensions
    *
    * @param  array $extensions Supported extensions
-   * @return bool
+   * @return Audio $this
    */
-  public function extensions(array $extensions) : bool
+  public function extensions(array $extensions) : Audio
   {
+    // Assign value and return object.
     $this->extensions = $extensions;
-    return true;
+    return $this;
   }
 }
