@@ -11,9 +11,9 @@ trait Convert
    *
    * @param  string $file File destination
    * @param  bool $force Overwrite file
-   * @return bool
+   * @return string|null
    */
-  public function toFlac(?string $file = null, bool $force = false) : bool
+  public function toFlac(?string $file = null, bool $force = false)
   {
     /**
      * If the source file is not a wav file, then throw a new exception.
@@ -48,6 +48,6 @@ trait Convert
     /**
      * Check if file exists
      */
-    return file_exists($file);
+    return file_exists($file) ? $file : null;
   }
 }
