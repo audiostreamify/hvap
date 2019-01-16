@@ -33,7 +33,7 @@ trait Bpm
     // Delete the temp file.
     unlink($this->temp);
 
-    // Return "0", if "Detected BPM rate" is not foundd.
+    // Return "0", if "Detected BPM rate" is not found.
     if (!str_contains(implode(' ', $lines), 'Detected BPM rate ')) return '0';
 
     /**
