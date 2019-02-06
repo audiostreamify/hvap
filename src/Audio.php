@@ -48,7 +48,7 @@ class Audio
     // Assign values.
     $this->file       = $file;
     $this->temp       = "/tmp/" . uniqid('hvap-', true);
-    $this->extensions = $extensions ?? $this->extension;
+    $this->extensions = $extensions ?? $this->extensions;
   }
 
   /**
